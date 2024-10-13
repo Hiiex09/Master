@@ -12,75 +12,44 @@
 ?>
 
 <section>
-<div class="flex w-full flex-col lg:flex-row p-8 gap-5">
-    <div class="card bg-base-300 rounded-box grid h-[500px] w-full grid lg:grid-rows p-4">
-      
-      <div>
-          <h1 class="text-2xl font-semibold">Teacher List</h1>
-      </div>
-      <div class="px-8 py-2">
-        <a href="#Teacher-1">
-          <img 
-            src="../Profiles User/Teacher 1.png" 
-            alt="Teacher-1"
-            height="60"
-            width="60"
-            class="rounded-md">
-        </a>
-      </div>
-      <div>
-        <form 
-          action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>"
-          method="post"
-          class="card-body">
-          <div class="form-control">
-
-            <input type="text" 
-              placeholder="Instructor Name" 
-              class="input input-bordered"
-              required
-              name="username"
-              autocomplete="off" />
+  <div class="container mx-auto grid md:grid-cols-1 lg:grid-cols-1 p-8 gap-5">
+    <div class="card bg-slate-200  rounded-box grid h-[550px] w-full p-8">
+    <div class="hero">
+      <div class="hero-content grid sm:grid-cols-1 md:grid-cols-2 lg:flex-row-reverse">
+          <div class="text-base sm:text-lg md:text-md lg:text-md">
+            <h1 class="font-bold leading-tight">Welcome Juana Mary</h1>
+            <p class="py-6 leading-relaxed text-sm sm:text-base md:text-lg lg:text-xl">
+              Dear Students,
+              <br /><br />
+              We are pleased to have you here as part of our commitment to improving the quality of education and services at Cebu Eastern College.
+              This system allows you to evaluate and provide valuable feedback on courses, instructors, and the overall learning experience.
+              Your input is vital in helping us enhance our academic programs and maintain a positive learning environment.
+              <br /><br />
+              Please take your time to complete the evaluations honestly and thoughtfully. Your feedback will help shape the future of our school.
+              <br /><br />
+              Thank you for your participation!
+            </p>
+            <button class="btn btn-primary">
+              <a href="#">Start Evaluate Now</a>
+            </button>
           </div>
-          <div class="form-control">
-            <input 
-              type="text" 
-              placeholder="Subject" 
-              class="input input-bordered" 
-              required
-              name="password"
-              autocomplete="off" />
-          </div>
-          <div class="form-control mt-6">
-            <input 
-              type="submit" 
-              value="Login"
-              class="btn btn-primary">
-          </div>
-        </form>
-      </div>
-    
-    </div>
-
-   
-    
-    <div class="card bg-base-300 rounded-box grid h-[500px] w-full grid grid-cols-2 p-4">
-      <div>
-          <h1 class="text-2xl font-semibold">Forms</h1>
-      </div>
-      <div class="p-2">
-        <div class="text-md text-accent-content">
-          <h1>1. Teaching Quality</h1>
-        </div>
-        <div class="text-md text-accent-content">
-          <p>How would you rate the teacher's knowledge of the subject?</p>
         </div>
       </div>
-      <div>
-        
+    </div>
+    <div class="card bg-slate-200  rounded-box grid h-[250px] w-full p-10">
+      <div class="text-center p-4">
+        <h1 class="text-5xl">Instruction</h1>
+      </div>
+      <div class="text-center">
+        <ul class="steps">
+          <li class="step step-primary text-lg p-2">Start Evaluation</li>
+          <li class="step step-primary text-lg p-2">Instructor Name</li>
+          <li class="step step-primary text-lg p-2">Subject</li>
+          <li class="step step-primary text-lg p-2">Submit Evaluation</li>
+        </ul>
       </div>
     </div>
-</div>
+  </div>
 </section>
 </body>
 </html>
