@@ -41,7 +41,9 @@
                   height="40">
                 </div>
                 <div>
-                  <a class="text-lg">Manage Students</a>
+                  <a 
+                    class="text-lg"
+                    href="../admin/student_table.php">Manage Students</a>
                 </div>
               </div>
             </li>
@@ -54,7 +56,9 @@
                   height="40">
                 </div>
                 <div>
-                  <a class="text-lg">Manage Teachers</a>
+                  <a 
+                    class="text-lg"
+                    href="../admin/teacher_table.php">Manage Teachers</a>
                 </div>
             </div>
             </li>

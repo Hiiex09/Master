@@ -1,6 +1,9 @@
 <?php
-  include('database/dbconnect.php');
+ 
+  include('./admin/functions/adminFunction.php');
   include 'header_student.php';
+
+  adminLogin($conn);
 ?>
 
 <!DOCTYPE html>
@@ -9,10 +12,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
 </head>
 
 <body>
-  
+
 <section>
   <div class="hero bg-base-300 min-h-screen">
     <div class="hero-content flex-col lg:flex-row-reverse">
@@ -26,39 +30,40 @@
       </div>
       <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
         <form 
-          action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>"
-          method="post"
+          action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" 
+          method="POST"
           class="card-body">
-          <div class="form-control">
-            <label class="label">
-              <span class="label-text text-xl">School ID</span>
-            </label>
-            <input type="text" 
-              placeholder="School ID" 
-              class="input input-bordered"
-              required
-              name="username"
-              autocomplete="off" />
+          <div class=" flex-col-2">
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text text-xl">School ID</span>
+              </label>
+              <input type="text" 
+                placeholder="School ID" 
+                class="input input-bordered"
+                required
+                name="username"
+                autocomplete="off" />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text text-xl">Password</span>
+              </label>
+              <input 
+                type="password" 
+                placeholder="Password" 
+                class="input input-bordered" 
+                required
+                name="password"
+                autocomplete="off" />
+            </div>
           </div>
-          <div class="form-control">
-            <label class="label">
-              <span class="label-text text-xl">Password</span>
-            </label>
-            <input 
-              type="password" 
-              placeholder="Password" 
-              class="input input-bordered" 
-              required
-              name="password"
-              autocomplete="off" />
-            <label class="label">
-              <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
-            </label>
-          </div>
+          
           <div class="form-control mt-6">
             <input 
               type="submit" 
               value="login"
+              name="login"
               class="btn btn-primary">
           </div>
         </form>
@@ -66,5 +71,6 @@
     </div>
   </div>
 </section>
+
 </body>
 </html>
